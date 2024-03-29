@@ -4,7 +4,7 @@ import '@wangeditor/editor/dist/css/style.css'
 import { onBeforeUnmount, ref, shallowRef, onMounted } from 'vue'
 import { Editor, Toolbar,IEditorConfig,IToolbarConfig } from '@wangeditor/editor-for-vue'
 import { getCurrent } from "@tauri-apps/api/window"
-import { webviewWindow } from "@tauri-apps/api"
+import { WebviewWindow } from "@tauri-apps/api/webviewWindow"
 const appWindow = getCurrent();
 appWindow.setAlwaysOnTop(true)
 const editorRef = shallowRef()
