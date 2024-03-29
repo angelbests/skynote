@@ -1,0 +1,31 @@
+{
+    "$schema": "../gen/schemas/desktop-schema.json",
+    "identifier": "main-capabilities",
+    "description": "default",
+    "windows": ["main","wallpaper","netspeed","note-*"],
+    "platforms": ["windows","linux","macOS"],
+    "local": true,
+    "permissions": [
+      "app:default",
+      "path:default",
+      "resources:default",
+      "menu:default",
+      "tray:default",
+
+      "event:default",
+      "event:allow-listen",
+      
+      "window:default",
+      "window:allow-start-dragging",
+      "window:allow-set-always-on-top",
+      "window:allow-set-shadow",
+      "window:allow-create",
+      "window:allow-set-size",
+      "window:allow-close",
+      "window:deny-hide",
+      "window-state:allow-restore-window-state",
+      "window-state:allow-save-window-state",
+      "webview:allow-create-webview-window",
+      "clipboard-manager:allow-write-text"
+    ] 
+  } 

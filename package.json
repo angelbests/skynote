@@ -1,0 +1,32 @@
+{
+  "name": "skynote",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": ">=2.0.0-beta.0",
+    "@tauri-apps/plugin-shell": ">=2.0.0-beta.0",
+    "@tauri-apps/plugin-window-state": "^2.0.0-beta.2",
+    "@tauri-apps/plugin-clipboard-manager": "^2.1.0-beta.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "^5.1.12",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.4",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@tauri-apps/cli": ">=2.0.0-beta.0",
+    "typescript": "^5.0.2",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.5",
+    "internal-ip": "^7.0.0",
+    "less": "^4.2.0"
+  }
+}

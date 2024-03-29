@@ -1,0 +1,37 @@
+{
+  "productName": "skynote",
+  "version": "0.0.1",
+  "identifier": "sky.miao.cn",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {"windows": [
+      {
+        "title": "skynote",
+        "width": 400,
+        "height": 900,
+        "decorations": false,
+        "transparent": true,
+        "label": "main",
+        "alwaysOnTop": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

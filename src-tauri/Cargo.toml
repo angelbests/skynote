@@ -1,0 +1,21 @@
+[package]
+name = "skynote"
+version = "0.0.1"
+description = "skynote"
+authors = ["you"]
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "2.0.0-beta.10", features = [] }
+
+[dependencies]
+tauri = { version = "2.0.0-beta.13", features = [] }
+tauri-plugin-shell = "2.0.0-beta"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri-plugin-clipboard-manager = "2.1.0-beta.0"
+tauri-plugin-window-state = "2.0.0-beta"
+sysinfo = "0.30.7"
+wallpaper = "3.2.0"
