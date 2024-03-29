@@ -63,7 +63,6 @@ onBeforeUnmount(() => {
     if (editor == null) return
     editor.destroy() 
 })    
-import { WebviewWindow } from "@tauri-apps/api/webviewWindow"
 const windowclose = function(){
     // appWindow.close()
     new WebviewWindow("123123",{
