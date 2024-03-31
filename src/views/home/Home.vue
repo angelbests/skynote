@@ -85,7 +85,8 @@ const shownotewindow = function(label:any){
         decorations:false,
         transparent:true,
         fileDropEnabled:true,
-        // contentProtected:true
+        contentProtected:true,
+        parent:getCurrent()
     })
 }
 
@@ -103,8 +104,9 @@ const getnetspeed = function(){
         transparent:true,
         minimizable:false,
         maximizable:false,
-        skipTaskbar:true
-        // contentProtected:true
+        skipTaskbar:true,
+        contentProtected:true,
+        parent:getCurrent()
     }) 
 }
 
@@ -138,8 +140,9 @@ const getweather = function(){
         transparent:true,
         minimizable:false,
         maximizable:false,
-        shadow:false
-        // contentProtected:true
+        shadow:false,
+        contentProtected:true,
+        parent:getCurrent()
     })
 }
 

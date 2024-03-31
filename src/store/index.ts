@@ -17,7 +17,8 @@ interface windowType {
     minimizable?:boolean,
     maximizable?:boolean,
     alwaysOnTop?:boolean,
-    skipTaskbar?:boolean
+    skipTaskbar?:boolean,
+    parent?:any
     
 }
 export const systemStore = defineStore("system",{
