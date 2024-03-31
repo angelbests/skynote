@@ -25,6 +25,11 @@ const routes:RouteRecordRaw[] = [
         name:"wallpaper",
         component:()=>import("./../views/wallpaper/Wallpaper.vue")
     },
+    {
+        path:"/weather",
+        name:"weather",
+        component:()=>import("./../views/weather/Weather.vue")
+    },
 ]
 
 const router:Router = createRouter({

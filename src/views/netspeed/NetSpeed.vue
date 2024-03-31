@@ -34,7 +34,7 @@ onMounted(async ()=>{
 })
 
 const closewindow = function(){
-    appWindow.close();
+    appWindow.close()
 }
 
 </script>

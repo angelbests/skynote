@@ -12,15 +12,25 @@
       {
         "title": "skynote",
         "width": 400,
-        "height": 900,
+        "height": 930,
         "decorations": false,
         "transparent": true,
         "label": "main",
-        "alwaysOnTop": true
+        "fileDropEnabled": false,
+        "center": true,
+        "shadow": false,
+        "contentProtected": true,
+        "maximizable": false,
+        "minimizable": false,
+        "resizable": false
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "assetProtocol": {
+        "enable":true,
+        "scope": ["$APPDATA/**","$PICTURE/**"]
+      }
     }
   },
   "bundle": {

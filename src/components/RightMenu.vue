@@ -12,13 +12,18 @@ withDefaults(defineProps<Props>(),{
 })
 const rightmenuref = ref<HTMLElement>()
 const show =ref(false)
-
+const emits = defineEmits<{
+    rightclick:[]
+}>()
 onMounted(()=>{
     rightmenuref.value?.parentElement?.addEventListener("contextmenu",(e)=>{
+        emits("rightclick");
         e.preventDefault();
         show.value = !show.value
     })
 })
+
+
 </script>
 
 <template>

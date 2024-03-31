@@ -1,7 +1,14 @@
 html,body{
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   border: none;
   border-radius: none;
   background: transparent;
+}
+
+.container{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-left:0px !important;
+  margin-right: 0px !important;
 }
