@@ -43,10 +43,10 @@ export const systemStore = defineStore("system",{
             
             const appWindow = new WebviewWindow(windowOption.label,{
                 ...windowOption
-                
             })
             this.windows.push(windowOption)
             localStorage.setItem("windows",JSON.stringify(this.windows))
+
             appWindow.listen("tauri://destroyed",()=>{
                 this.windows = JSON.parse(localStorage.getItem("windows")||'[]');
                 this.windows.filter((item,index)=>{
@@ -55,17 +55,10 @@ export const systemStore = defineStore("system",{
                     }
                 })
                 localStorage.setItem("windows",JSON.stringify(this.windows))
-                // let notes = JSON.parse(localStorage.getItem("notes")||'[]');
-                // notes.filter((item:any,index:any)=>{
-                //     if(item.label == appWindow.label){
-                //         notes.splice(index,1)
-                //     }
-                // })
-                // localStorage.setItem("notes",JSON.stringify(notes))
-                
             })
-            const factor =await appWindow.scaleFactor();
-            appWindow.listen("tauri://move",(e:any)=>{
+            
+            appWindow.listen("tauri://move",async (e:any)=>{
+                const factor =await appWindow.scaleFactor();
                 this.windows = JSON.parse(localStorage.getItem("windows")||'[]');
                 this.windows.filter(item=>{
                     if(item.label == appWindow.label){
@@ -91,17 +84,11 @@ export const systemStore = defineStore("system",{
                         }
                     })
                     localStorage.setItem("windows",JSON.stringify(this.windows))
-
-                    // let notes = JSON.parse(localStorage.getItem("notes")||'[]');
-                    // notes.filter((item:any,index:any)=>{
-                    //     if(item.label == appWindow.label){
-                    //         notes.splice(index,1)
-                    //     }
-                    // })
-                    // localStorage.setItem("notes",JSON.stringify(notes))
                 })
-                const factor =await appWindow.scaleFactor();
-                appWindow.listen("tauri://move",(e:any)=>{
+                
+                appWindow.listen("tauri://move",async (e:any)=>{
+                    const factor =await appWindow.scaleFactor();
+                    console.log(e)
                     this.windows = JSON.parse(localStorage.getItem("windows")||'[]');
                     this.windows.filter(item=>{
                         if(item.label == appWindow.label){
